@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Haras — Experiências Equestres</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="inscricao2.css">
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+<div class="bg-viewport">
+  <img id="bgImage1" class="bg-image active" src="./imagens/fundo1.png" alt="Fundo" />
+  <img id="bgImage2" class="bg-image" src="./imagens/fundo2.png" alt="Fundo" />
+  <div class="slide-text">Viva a experiência equestre perfeita.</div>
+</div>
+
+  <!-- PAGE CONTENT -->
+  <header class="site-header">
+    <div class="left">
+      <div class="brand">Haras &amp; Escola Equestre</div>
+      <nav class="nav-compact">
+        <button class="nav-btn" data-open="passeioModal">Passeios</button>
+        <button class="nav-btn" data-open="hotelariaModal">Hotelaria</button>
+      </nav>
+    </div>
+
+    <div class="right">
+      <!-- Removed inline onclick to prevent interference with modal event listeners -->
+      <button class="nav-btn" id="homeBtn">Home</button>
+      <button class="nav-btn" data-open="cursosModal">Cursos &amp; Aulas</button>
+      <button class="nav-btn" data-open="loginModal">Login</button>
+    </div>
+  </header>
+
+  <main class="hero">
+    <div class="hero-inner">
+     
+    </div>
+  </main>
+
+  <!-- modais (hidden por padrão) -->
+  
+  <!-- Passeio -->
+  <div id="passeioModal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <button class="modal-close" data-close>&times;</button>
+      <h2>Reserva de Passeio a Cavalo</h2>
+      <form class="modal-form" id="formPasseio">
+        <label class="required">Nome <input name="nome" required></label>
+        <label class="required">E-mail <input name="email" type="email" required></label>
+        <label class="required">Localidade
+          <select name="localidade" required>
+            <option value="">— Selecione —</option>
+            <option>Trilha do Bosque</option>
+            <option>Lagoa</option>
+            <option>Caminho do Alto</option>
+          </select>
+        </label>
+        <label class="required">Quantidade de Pessoas <input name="qtd" type="number" min="1" value="1" required></label>
+        <label class="required">Data preferida <input name="data" type="date" required></label>
+        <label>Observações <textarea name="obs" rows="2"></textarea></label>
+
+        <div class="modal-actions">
+          <button type="button" class="btn ghost" data-close>Cancelar</button>
+          <button type="submit" class="btn primary">Reservar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Hotelaria -->
+  <div id="hotelariaModal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <button class="modal-close" data-close>&times;</button>
+      <h2>Hotelaria para Cavalos</h2>
+      <form id="formHotelaria" class="modal-form">
+        <label class="required">Nome do proprietário <input name="nome" required></label>
+        <label class="required">E-mail <input name="email" type="email" required></label>
+        <label class="required">Quantidade de cavalos <input name="qtdCavalos" type="number" min="1" value="1" required></label>
+        <label class="required">Dias de estadia <input name="dias" type="number" min="1" value="7" required></label>
+        <label class="required">Alimentação inclusa?
+          <select name="alimentacao" required>
+            <option value="">— Selecione —</option>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+          </select>
+        </label>
+        <div class="note">Para mais detalhes fale diretamente com o proprietário.</div>
+
+        <div class="modal-actions">
+          <button type="button" class="btn ghost" data-close>Cancelar</button>
+          <button type="submit" class="btn primary">Solicitar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- CURSOS -->
+  <div id="cursosModal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-card glass large">
+      <button class="modal-close" data-close>&times;</button>
+      <h2>Inscrição — Cursos e Aulas</h2>
+      
+      <div class="modal-body">
+        <!-- Menu Lateral Minimalista -->
+        <div class="course-menu-sidebar">
+          <ul class="course-menu-list">
+            <li><button type="button" class="course-menu-item active" data-tab="salto">Salto</button></li>
+            <li><button type="button" class="course-menu-item" data-tab="adestramento">Adestramento</button></li>
+            <li><button type="button" class="course-menu-item" data-tab="redes">Rédeas</button></li>
+            <li><button type="button" class="course-menu-item" data-tab="ecoterapia">Ecoterapia</button></li>
+            <li><button type="button" class="course-menu-item" data-tab="iniciante">Iniciação Equestre</button></li>
+            <li><button type="button" class="course-menu-item" data-tab="avancado">Nível Avançado</button></li>
+          </ul>
+        </div>
+
+        <!-- Conteúdo do Formulário -->
+        <div class="modal-content">
+          <form id="formCursos" class="modal-form">
+            <label class="required">Nome completo <input name="nome" required></label>
+            <label class="required">E-mail <input name="email" type="email" required></label>
+            <label class="required">Telefone <input name="telefone" type="tel" required></label>
+
+            <div class="form-row">
+              <label class="required">Curso
+                <select name="curso" id="cursoSelect" required>
+                  <option value="">— Selecione —</option>
+                  <option value="salto">Salto</option>
+                  <option value="adestramento">Adestramento</option>
+                  <option value="redes">Rédeas</option>
+                  <option value="ecoterapia">Ecoterapia</option>
+                  <option value="iniciante">Iniciação Equestre</option>
+                  <option value="avancado">Nível Avançado</option>
+                </select>
+              </label>
+
+              <label class="required">Nível
+                <select name="nivel" required>
+                  <option value="">— Selecione —</option>
+                  <option value="iniciante">Iniciante</option>
+                  <option value="intermediario">Intermediário</option>
+                  <option value="avancado">Avançado</option>
+                </select>
+              </label>
+            </div>
+
+            <div id="cursoConditional" class="conditional hidden">
+              <label class="required">Aulas por semana
+                <select name="aulasSemana" required>
+                  <option value="">— Selecione —</option>
+                  <option>1</option><option>2</option><option>3</option><option>4</option>
+                </select>
+              </label>
+
+              <div class="info" id="cursoPreco">Preço estimado: —</div>
+            </div>
+
+            <label class="required">Data preferida para início <input name="data" type="date" required></label>
+            
+            <label>Experiência anterior <textarea name="experiencia" rows="3" placeholder="Descreva sua experiência prévia com cavalos (opcional)"></textarea></label>
+
+            <div class="modal-actions">
+              <button type="button" class="btn ghost" data-close>Cancelar</button>
+              <button type="submit" class="btn primary">Enviar inscrição</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login -->
+  <div id="loginModal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-card small">
+      <button class="modal-close" data-close>&times;</button>
+      <h2>Entrar</h2>
+      <form id="formLogin" class="modal-form">
+        <label class="required">E-mail <input name="email" type="email" required></label>
+        <label class="required">Senha <input name="password" type="password" required></label>
+        <div class="modal-actions">
+          <button type="button" class="btn ghost" data-close>Cancelar</button>
+          <button type="submit" class="btn primary">Entrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- GSAP + AOS -->
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+  <script src="inscricao2.js"></script>
+  <script> AOS.init({ duration:600, once:true }); </script>
+
+  <!-- Removido o script duplicado do botão Home, agora é gerenciado apenas pelo inscricao2.js -->
+
+</body>
+</html>

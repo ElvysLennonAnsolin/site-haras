@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARTE EDU</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@600&family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="page-loader">
+        <div class="loader-content">
+            <img src="./imagem/cavalo-dancando-e-fundo-de-ferradura.png" alt="Logo Haras" class="loader-logo">
+        </div>
+    </div>
+    <header>
+        <div class="header">
+            <h1 id="topo">Haras La Paloma</h1>
+            <nav class="menu">
+                <ul>
+                    <!-- Fixed anchor links to match actual section IDs -->
+                    <li><a href="#novidades">Novidades</a></li>
+                    <li><a href="#cursos">Cursos</a></li>
+                    <li><a href="#sobre-nos">Sobre Nós</a></li>
+                    <li><a href="./inscricao/inscricao2.html">Login/Reservas</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Reordered sections: sobre-nos first, then novidades -->
+    <section class="sobre-haras" id="sobre-nos">
+        <div class="sobre-container">
+            <div class="sobre-imagem">
+                <img src="./imagem/entrada.png" alt="Haras La Paloma">
+            </div>
+            <div class="sobre-texto">
+                <h2>Bem-vindo ao Haras La Paloma</h2>
+                <p>
+                    O Haras La Paloma é um centro de excelência dedicado à criação, treinamento e cuidado de cavalos de alta performance. 
+                    Localizado em uma área privilegiada, nosso haras combina tradição equestre com técnicas modernas de manejo e treinamento.
+                </p>
+                <p>
+                    Com mais de 20 anos de experiência, oferecemos cursos especializados para cavaleiros de todos os níveis, 
+                    desde iniciantes até profissionais. Nossa equipe é formada por instrutores certificados e apaixonados por cavalos, 
+                    comprometidos em proporcionar a melhor experiência educacional.
+                </p>
+                <p>
+                    No Haras La Paloma, você encontrará infraestrutura completa, incluindo pistas de treinamento, picadeiros cobertos, 
+                    estábulos modernos e áreas de lazer. Venha fazer parte da nossa família equestre!
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="novidades" id="novidades">
+        <h2 class="slide-left">Novidades e Atualizações</h2>
+        <div class="novidades-grid">
+            <article class="novidade-card fade-item">
+                <h3>Inovação e tendências da indústria equestre mundial</h3>
+                <p>A Feira Equitana é a maior plataforma de inovação e tendências da indústria equestre mundial com participação de todos os esportes equestres em um espaço gigante.<br>
+O evento acontece em Essen, Alemanha e a cada edição atrai mais brasileiros em busca destas novidades, inovação e uma temporada de experiências e contato com o meio equestre do mundo todo.<br>
+A feira concentra o lançamento de novos produtos para o mercado equestre; novidades e tendências em negócios internacionais; excelentes e atraentes possibilidades comerciais, especialmente os produtores de bens, criadores e fornecedores de equipamentos de alta qualidade para o mercado da equitação.<br>
+Os participantes podem obter informações privilegiadas sobre esportes equestres e a indústria num único local e, ainda, encontrar criadores, atletas, organizadores, fornecedores, especialistas e associações de mais de 30 países, para negociar produtos ou animais. Outra atração são as arenas indoor para equitação, apresentações, shows e competições, em eventos que tocam o coração de quem ama cavalos.
+A Unibens Turismo é uma agência de viagens especializada em roteiros equestres e a cada edição da feira leva os brasileiros para uma temporada de imersão na cultura equestre alemã. Para saber mais clique aqui.
+Saiba mais sobre a viagem à Feira Equitana, clique aqui para falar agora pelo WhatsApp com Kelly Bruno da Unibens Turismo e solicitar mais informações.</p>
+                <span class="data">15/12/2024</span>
+            </article>
+            <article class="novidade-card fade-item">
+                <h3>Inovação em equipamentos de segurança para montadores</h3>
+                <p>No evento spoga horse 2025, na Alemanha, foram mostradas novas tecnologias para a segurança do cavaleiro, incluindo um colete-airbag sem cabo (que infla em cerca de 30 ms) e stirrups (estribos) com sistema de libertação em situações de queda.
++2
+Horse Sport
++2
+
+Por que importa: melhora significativa na proteção do montador, reduzindo risco de ferimentos graves. Isso impacta diretamente tanto o esporte (competição) quanto o lazer no mundo equestre.</p>
+                <span class="data">10/12/2024</span>
+            </article>
+            <article class="novidade-card fade-item">
+                <h3>Novas pesquisas para saúde e bem-estar do cavalo</h3>
+                <p>A Morris Animal Foundation (EUA) concedeu recentemente bolsas de pesquisa focadas no comportamento equino, saúde do sono e na gestão de dores durante procedimentos de reprodução. 
+morrisanimalfoundation.org
+
+Por que importa: promove um entendimento mais profundo das necessidades dos equinos, o que pode levar a melhores práticas de manejo, melhoria na performance e maior longevidade desses animais.</p>
+                <span class="data">05/12/2024</span>
+            </article>
+        </div>
+    </section>
+    
+    <div class="stair-gallery-container" id="cursos">
+        <button class="stair-btn prev">&#10094;</button>
+        <div class="stair-gallery">
+            <div class="stair-item" data-descricao="A equoterapia é uma terapia que usa o cavalo para promover equilíbrio emocional, motor e cognitivo. 🌼">
+                <img src="imagem/cursos/equoterapia.jpg" alt="Curso de Equoterapia">
+            </div>
+            <div class="stair-item" data-descricao="Aprenda o ferrageamento correto para proteger os cascos e melhorar o desempenho do cavalo.">
+                <img src="imagem/cursos/ferrageamento.jpg" alt="Curso de Ferrageamento">
+            </div>
+            <div class="stair-item" data-descricao="Domine as técnicas de adestramento para fortalecer a relação cavalo-cavaleiro.">
+                <img src="imagem/cursos/O-Adestramento-5.jpg" alt="Curso de Adestramento">
+            </div>
+            <div class="stair-item" data-descricao="Aperfeiçoe suas habilidades nas provas de três tambores com foco em velocidade e controle.">
+                <img src="imagem/cursos/prova-tres-tambores.jpg" alt="Curso de Três Tambores">
+            </div>
+            <div class="stair-item" data-descricao="Aprenda as bases do salto equestre e técnicas de equilíbrio e confiança no percurso.">
+                <img src="imagem/cursos/salto.webp" alt="Curso de Salto">
+            </div>
+            <div class="stair-item" data-descricao="Explore trilhas a cavalo com segurança e respeito à natureza. Um curso leve e prazeroso.">
+                <img src="imagem/cursos/trilha.jpg" alt="Curso de Trilhas">
+            </div>
+        </div>
+        <a href="inscricao/inscricao2.html" class="btn-inscrever-lateral">Inscreva-se</a>
+        <div class="caixa-curso" id="caixa-curso">
+            <p id="texto-curso"></p>
+        </div>
+        <button class="stair-btn next">&#10095;</button>
+    </div>
+    <footer class="footer-animado" id="footer-animado">
+        <!-- Camada de nuvens -->
+        <div class="container-nuvens" id="container-nuvens">
+            <canvas id="nuvens-canvas"></canvas>
+        </div>
+        <!-- Camada do universo -->
+        <div class="container-universo" id="container-universo">
+            <div id="fundo-estrelado"></div>
+            <div id="container-chuva"></div>
+            <!-- Cruzeiro do Sul -->
+            <div id="container-cruzeiro">
+                <div id="cruzeiro-centro">
+                    <div class="estrela-cruzeiro" id="cruzeiro-1"></div>
+                    <div class="estrela-cruzeiro" id="cruzeiro-2"></div>
+                    <div class="estrela-cruzeiro" id="cruzeiro-3"></div>
+                    <div class="estrela-cruzeiro" id="cruzeiro-4"></div>
+                    <div class="estrela-cruzeiro" id="cruzeiro-5"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Integrated footer info inside footer-animado -->
+        <div class="footer-info">
+            <div class="footer-grid">
+                <div class="footer-sobre">
+                    <h3>Sobre Nós</h3>
+                    <p>Somos apaixonados por tecnologia e inovação. Nosso objetivo é criar experiências digitais marcantes e inspiradoras, com foco em design e performance.</p>
+                </div>
+                <div class="footer-contato">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li>Email: <a href="mailto:contato@seudominio.com">contato@seudominio.com</a></li>
+                        <li>WhatsApp: <a href="https://wa.me/5500000000000" target="_blank">+55 (00) 00000-0000</a></li>
+                        <li>Instagram: <a href="https://instagram.com/seu_perfil" target="_blank">@seu_perfil</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="footer-copy">© 2025 Seu Projeto. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <!-- Shaders para as nuvens procedural -->
+    <script id="vertexShader" type="x-shader/x-vertex">
+        varying vec2 vUv;
+        void main() {
+            vUv = uv;
+            gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+        }
+    </script>
+    <script id="fragmentShader" type="x-shader/x-fragment">
+        precision mediump float; 
+        varying vec2 vUv;
+        uniform float u_time; 
+        uniform float u_scroll; 
+        float random (vec2 st) {
+            return fract(sin(dot(st.xy, vec2(12.9898,78.233))) * 43758.5453123);
+        }
+        float noise (vec2 st) {
+            vec2 i = floor(st);
+            vec2 f = fract(st);
+            float a = random(i);
+            float b = random(i + vec2(1.0, 0.0));
+            float c = random(i + vec2(0.0, 1.0));
+            float d = random(i + vec2(1.0, 1.0));
+            vec2 u = f*f*(3.0-2.0*f);
+            return mix(a, b, u.x) + (c - a)* u.y * (1.0 - u.x) + (d - b) * u.y * u.x;
+        }
+        float fbm(vec2 st) {
+            float value = 0.0;
+            float amplitude = 0.5;
+            float frequency = 1.0;
+            for (int i = 0; i < 4; i++) {
+                value += amplitude * noise(st);
+                st *= 2.0;
+                amplitude *= 0.5;
+            }
+            return value;
+        }
+        void main() {
+            vec3 effect_color = vec3(207, 209, 209);
+            vec2 st = vec2(vUv.x * 1.0, vUv.y * 2.0);
+            st.x += 0.707 * u_time * 0.1;
+            st.y -= 0.707 * u_time * 0.5;
+            float noise_value = fbm(st);
+            float fade_in = smoothstep(3.0, 0.5, vUv.y); 
+            float fade_out = 1.0 - smoothstep(0.9, 0.95, vUv.y);
+            float vertical_mask = fade_in * fade_out;
+            float noise_contrast = smoothstep(0.4, 0.6, noise_value);
+            float final_alpha = noise_contrast * vertical_mask * 0.7;
+            gl_FragColor = vec4(effect_color, final_alpha); 
+        }
+    </script>
+</body>
+</html>
